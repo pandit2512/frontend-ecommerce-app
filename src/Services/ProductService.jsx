@@ -28,3 +28,42 @@ export const fetchProducts = async () => {
   const data = await response.json();
   return data["_embedded"]["products"];
 };
+
+//====Fetch Products (productName : Asc)
+
+export const fetchproductsByProductNameAsc = async () => {
+  fetch(API_LINK + "/search/findByOrderByProductNameAsc");
+  const response = await fetch(
+    API_LINK + "/search/findByOrderByProductNameAsc"
+  );
+  const data = await response.json();
+  return data["_embedded"]["products"];
+};
+//====Fetch Products (productName : desc)
+export const fetchproductsByProductNameDesc = async () => {
+  fetch(API_LINK + "/search/findByOrderByProductNameDesc");
+  const response = await fetch(
+    API_LINK + "/search/findByOrderByProductNameDesc"
+  );
+  const data = await response.json();
+  return data["_embedded"]["products"];
+};
+
+// Fetch product By Price Low to High
+
+export const fetchproductsByPriceAsc = async () => {
+  const response = await fetch(
+    API_LINK + "/search/findByOrderByProductPriceAsc"
+  );
+  const data = await response.json();
+  return data["_embedded"]["products"];
+};
+// Fetch product By Price High to Low
+
+export const fetchproductsByPriceDesc = async () => {
+  const response = await fetch(
+    API_LINK + "/search/findByOrderByProductPriceDesc"
+  );
+  const data = await response.json();
+  return data["_embedded"]["products"];
+};
