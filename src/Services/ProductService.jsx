@@ -67,3 +67,12 @@ export const fetchproductsByPriceDesc = async () => {
   const data = await response.json();
   return data["_embedded"]["products"];
 };
+
+//fetch product by id
+
+export const fetchProductById = async (productId) => {
+  console.log(API_LINK + `/${productId}`);
+  const response = await fetch(API_LINK + `/${productId}`);
+  const data = await response.json();
+  return data;
+};
