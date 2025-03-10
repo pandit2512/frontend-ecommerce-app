@@ -52,6 +52,7 @@ function ProductForm() {
             value={formData.productName}
             onChange={handleChange}
             name="productName"
+            required
           />
         </div>
 
@@ -68,6 +69,7 @@ function ProductForm() {
             value={formData.productDescription}
             onChange={handleChange}
             name="productDescription"
+            required
           />
         </div>
 
@@ -84,6 +86,7 @@ function ProductForm() {
             value={formData.productPrice}
             onChange={handleChange}
             name="productPrice"
+            required
           />
         </div>
         {/* submit button  */}

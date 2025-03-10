@@ -76,3 +76,26 @@ export const fetchProductById = async (productId) => {
   const data = await response.json();
   return data;
 };
+
+// To update product by Id
+
+export const updateProduct = async (productId, product) => {
+  const response = await fetch(API_LINK + `/${productId}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(product),
+  });
+
+  const data = await response.json();
+  return data;
+};
+
+export const deleteProductById = async (productId) => {
+  const response = await fetch(API_LINK + `/${productId}`, {
+    method: "DELETE",
+    //body: JSON.stringify(product), => you wouldn't need to send the product details in the body.
+  });
+
+  const data = await response.json();
+  return data;
+};

@@ -6,6 +6,7 @@ import Layout from "./Comonents/Layout";
 import Homepage from "./Comonents/Homepage";
 import ProductForm from "./Comonents/Products/ProductForm";
 import AllProducts from "./Comonents/Products/AllProducts";
+import ProductDetail from "./Comonents/Products/ProductDetail";
 
 const routes = createBrowserRouter([
   {
@@ -24,7 +25,10 @@ const routes = createBrowserRouter([
         path: "all-products",
         element: <AllProducts />,
       },
-      {},
+      {
+        path: "products/:productId",
+        element: <ProductDetail />,
+      },
     ],
   },
 ]);

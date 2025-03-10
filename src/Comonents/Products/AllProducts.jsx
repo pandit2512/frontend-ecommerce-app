@@ -141,6 +141,7 @@ function AllProducts() {
                     productName={product.productName}
                     productDescription={product.productDescription}
                     productPrice={product.productPrice}
+                    refreshProduct={getProducts}
                   />
                 ))
               )}
